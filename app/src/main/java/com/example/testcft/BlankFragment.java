@@ -24,7 +24,7 @@ public class BlankFragment extends DialogFragment {
     private int nominalInt;
     private double currencyDouble;
     private double resultDouble;
-    private int inputRubles;
+    private int inputRubles = 0;
     private Context context;
     private String charCode;
     // счетчик количества попыток открыть диалоговое окно

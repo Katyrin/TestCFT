@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">TestCFT</string>
+    <string name="previous_course">Предыдущий курс:</string>
+    <string name="denomination">Номинал:</string>
+    <string name="result">Результат:</string>
+    <string name="cancel">Отмена</string>
+    <string name="count">Расчитать</string>
+    <string name="updateData">Обновить данные</string>
+</resources>

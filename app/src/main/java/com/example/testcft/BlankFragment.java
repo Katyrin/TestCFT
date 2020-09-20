@@ -29,6 +29,7 @@ public class BlankFragment extends DialogFragment {
     private String charCode;
     // счетчик количества попыток открыть диалоговое окно
     static int count = 0;
+    private String inStr;
 
     public void setNameCurrency(String str){
         nameCurrency = str;
@@ -68,14 +69,18 @@ public class BlankFragment extends DialogFragment {
 
         countButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                inputRubles = Integer.parseInt(ipt.getText().toString());
-                resultDouble = inputRubles/currencyDouble*nominalInt;
-                BigDecimal bd = new BigDecimal(Double.toString(resultDouble));
-                bd = bd.setScale(4, RoundingMode.HALF_UP);
-                countResult.setText(String.valueOf(bd.doubleValue()));
+            public void onClick(View view){
+                inStr = ipt.getText().toString();
+                if (!inStr.equals("")){
+                    inputRubles = Integer.parseInt(inStr);
+                    resultDouble = inputRubles / currencyDouble * nominalInt;
+                    BigDecimal bd = new BigDecimal(Double.toString(resultDouble));
+                    bd = bd.setScale(4, RoundingMode.HALF_UP);
+                    countResult.setText(String.valueOf(bd.doubleValue()));
+                }
             }
         });
+
         cancelButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
